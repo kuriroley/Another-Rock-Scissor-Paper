@@ -40,7 +40,8 @@ function gameLogic(player,computer){
             
         }
 }
-for (let i = 1; i<=5; i++){
-    gameLogic(getPlayerChoice(),getComputerChoice());
-}
+
+// for (let i = 1; i<=5; i++){
+//     gameLogic(getPlayerChoice(),getComputerChoice());
+// }
 
