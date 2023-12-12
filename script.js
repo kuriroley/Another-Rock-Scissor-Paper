@@ -10,10 +10,16 @@ cardButtons.forEach((button)=>{
     
     button.addEventListener('click', e=>{
         playerAnswer = e.target.value;
-
-        roundTracker(gameLogic(playerAnswer,getComputerChoice()));
+        if(gameRounds <= 4){
+            gameLogic(playerAnswer,getComputerChoice())
+            gRounds.textContent = `Game rounds: ${gameRounds++}`;
+        } else{
+            selectLog.textContent = 'Try Again?'
+            gRounds.style.cssText = 'font-size:50px'
+            gRounds.textContent = 'Game over!'
+            
+        }
         
-
     })
 })
 
@@ -29,7 +35,6 @@ function getComputerChoice(){
 
 function gameLogic(player,computer){
     
-
     if(player === 'rock' && computer === 'scissor'){
         playerScore++;
         pScore.textContent = `Player score: ${playerScore}`;
@@ -50,20 +55,3 @@ function gameLogic(player,computer){
         return selectLog.textContent = `Computer's ${computer} beat player's ${player}! Try again!`;        
     }
 }
-
-function roundTracker(game){
-    
-    for(let i = gameRounds; i <= 5; i++){
-        if(i!=5){
-            game;
-            gRounds.textContent = `Game rounds: ${gameRounds++}`
-        } else{
-            gRounds.textContent = 'Game over!'
-        }
-    }
-}
-
-// for (let i = 1; i<=5; i++){
-//     gameLogic(getPlayerChoice(),getComputerChoice());
-// }
-
