@@ -17,6 +17,8 @@ body{
 }
 .game-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 400px;
     height: 300px;
     background-color: black;
@@ -26,16 +28,33 @@ body{
 .elements{
     width: 120px;
     height: 120px;
-    background-color: rgb(134, 179, 179);
     margin: 20px auto auto;
-    text-align: center;
 }
+.elements button{
+    background-color: inherit;
+    border: 2px solid black;
+    
+}
+.elements button:hover{
+    background-color: rgba(39, 38, 38, 0.452);
+}
+.elements:nth-child(1){
+    background-color: rgb(130,170,170);
+    
+}
+
 .elements:nth-child(2){
-    background-color: pink;
+    background-color: rgb(252, 121, 143);
 }
 .elements:nth-child(3){
     background-color: rgb(155, 21, 31);
 }
+.game-result {
+    align-items: center;
+    color: white;
+}
+
+
 .score-container{
     width: 500px; 
     height: 100px;
