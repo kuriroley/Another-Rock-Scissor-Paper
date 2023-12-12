@@ -1,10 +1,13 @@
+const cardButtons = document.querySelectorAll('buttons');
+
+
+
+
 function getComputerChoice(){
     let choices = ['rock','scissor','paper'];
-
     //using math floor for getting a random value from array
     let choice = choices[Math.floor(choices.length * Math.random())];
     return choice
-
 }
 
 

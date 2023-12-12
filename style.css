@@ -2,14 +2,14 @@
     margin: 0;
 }
 body{
-    background-color: beige;
+    background-color: rgb(90, 90, 78);
 }
 
 .text-container{
     width: 100%;
-    height: 100px;
+    height: 80px;
     text-align: center;
-    background-color: bisque;
+    background-color: rgb(222, 165, 96);
     margin-bottom: 10px;
 }
 .text-container h2{
@@ -19,30 +19,44 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 400px;
+    width: 450px;
     height: 300px;
     background-color: black;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 .elements{
+    display: flex;
     width: 120px;
     height: 120px;
     margin: 20px auto auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    
 }
 .elements button{
+    width: 80px;
+    height: 50px;
     background-color: inherit;
     border: 2px solid black;
-    
+    margin-bottom: 2px;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 0 3px rgb(0, 0, 0);
 }
 .elements button:hover{
     background-color: rgba(39, 38, 38, 0.452);
+    transition: 0.1s;
+}
+.elements button:active{
+    transform: translateY(3px);
+    transition: 0.1s;
 }
 .elements:nth-child(1){
     background-color: rgb(130,170,170);
     
 }
-
 .elements:nth-child(2){
     background-color: rgb(252, 121, 143);
 }
@@ -52,8 +66,8 @@ body{
 .game-result {
     align-items: center;
     color: white;
+    
 }
-
 
 .score-container{
     width: 500px; 
