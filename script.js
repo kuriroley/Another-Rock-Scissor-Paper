@@ -3,6 +3,7 @@ const selectLog = document.querySelector('span');
 const pScore = document.querySelector('.pScore');
 const cScore = document.querySelector('.cScore');
 const gRounds = document.querySelector('.gRounds');
+const gContainer = document.querySelector('.game-container');
 
 cardButtons.forEach((button)=>{
     
@@ -10,13 +11,23 @@ cardButtons.forEach((button)=>{
     
     button.addEventListener('click', e=>{
         playerAnswer = e.target.value;
-        if(gameRounds <= 4){
+        if(gameRounds <= 5){
             gameLogic(playerAnswer,getComputerChoice())
             gRounds.textContent = `Game rounds: ${gameRounds++}`;
         } else{
-            selectLog.textContent = 'Try Again?'
-            gRounds.style.cssText = 'font-size:50px'
-            gRounds.textContent = 'Game over!'
+            if(playerScore > computerScore){
+                gRounds.textContent = 'Game over! Player is the winner';
+            } else if(computerScore > playerScore){
+                gRounds.textContent = 'Game over! Computer is the winner';
+            } else if(playerScore === computerScore){
+                gRounds.textContent = `It's a tie, no winners! Try again?`
+            }
+            gRounds.style.cssText = 'font-size:40px';
+            const reset = document.createElement('button');
+            gContainer.textContent = ''
+            gContainer.appendChild(reset);
+            reset.style.cssText = 'width:80px; height:50px; margin: auto 0; border: 2px solid black;'
+            reset.textContent = 'Reset the game?'
             
         }
         
