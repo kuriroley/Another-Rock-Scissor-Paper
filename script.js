@@ -23,15 +23,13 @@ cardButtons.forEach((button)=>{
             gRounds.style.cssText = 'font-size:40px';
             const reset = document.createElement('button');
             reset.classList.add('refresh-button');
-            gContainer.textContent = ''
+            gContainer.textContent = '';
             gContainer.appendChild(reset);
             reset.textContent = 'Reset the game?'
             reset.addEventListener('click', ()=>{
                 document.location.reload();
-            })
-            
+            })   
         }
-        
     })
 })
 
@@ -45,8 +43,7 @@ function getComputerChoice(){
     let computerScore = 0;
     let gameRounds = 1;
 
-function gameLogic(player,computer){
-    
+function gameLogic(player,computer){    
     if(player === 'rock' && computer === 'scissor'){
         playerScore++;
         pScore.textContent = `Player score: ${playerScore}`;
