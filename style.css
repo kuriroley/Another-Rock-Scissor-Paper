@@ -33,7 +33,6 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 2px;
-    
 }
 .elements button{
     width: 80px;
@@ -55,7 +54,6 @@ body{
 }
 .elements:nth-child(1){
     background-color: rgb(130,170,170);
-    
 }
 .elements:nth-child(2){
     background-color: rgb(252, 121, 143);
@@ -67,9 +65,7 @@ body{
     align-items: center;
     color: white;
     font-size: 18px;
-    
 }
-
 .score-container{
     width: 500px; 
     height: 150px;
@@ -77,6 +73,22 @@ body{
     padding: 10px;
     background-color: black;
     color: white;
-
 }
-
+.refresh-button{
+    width:  150px; 
+    height: 150px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(2, 2, 51);
+    height: 150px;
+    margin: auto 0;
+    border: 2px solid rgb(133, 43, 43);
+    border-radius: 3px;
+}
+.refresh-button:hover{
+    background-color: rgb(8,8,90);
+    transition: 0.1s;
+}
+.refresh-button:active{
+    transform: translateY(3px);
+}

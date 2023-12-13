@@ -6,9 +6,7 @@ const gRounds = document.querySelector('.gRounds');
 const gContainer = document.querySelector('.game-container');
 
 cardButtons.forEach((button)=>{
-    
     let playerAnswer;
-    
     button.addEventListener('click', e=>{
         playerAnswer = e.target.value;
         if(gameRounds <= 5){
@@ -24,10 +22,13 @@ cardButtons.forEach((button)=>{
             }
             gRounds.style.cssText = 'font-size:40px';
             const reset = document.createElement('button');
+            reset.classList.add('refresh-button');
             gContainer.textContent = ''
             gContainer.appendChild(reset);
-            reset.style.cssText = 'width:80px; height:50px; margin: auto 0; border: 2px solid black;'
             reset.textContent = 'Reset the game?'
+            reset.addEventListener('click', ()=>{
+                document.location.reload();
+            })
             
         }
         
